@@ -6,18 +6,5 @@
     "c"
     "f";
   grid-template-rows: 60px 1fr 60px;
-  grid-gap: 5px;
-}
 
-
-
-
-.content {
-  grid-area: c;
-  background-color: red;
-}
-
-.footer {
-  grid-area: f;
-  background-color: grey;
 }
