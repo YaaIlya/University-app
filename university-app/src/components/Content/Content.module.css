@@ -1,0 +1,8 @@
+.content {
+    grid-area: c;
+    background-color: #e1e0d3;
+}
+
+.item {
+    margin: 400px;
+}
