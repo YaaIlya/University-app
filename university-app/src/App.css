@@ -8,3 +8,8 @@
   grid-template-rows: 60px 1fr 60px;
 
 }
+
+.app-wrapper-content {
+  grid-area: c;
+  background-color: #e1e0d3;
+}

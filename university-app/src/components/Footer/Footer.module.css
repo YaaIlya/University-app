@@ -2,3 +2,7 @@
     grid-area: f;
     background-color: #93c2cd;
 }
+
+.item {
+    text-decoration: none;
+}
