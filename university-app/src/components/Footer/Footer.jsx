@@ -1,14 +1,17 @@
 import React from 'react';
 import classes from "./Footer.module.css";
+import { NavLink } from 'react-router-dom';
 
 
 const Footer = () => {
     return <div className={classes.footer}>
         <div>All rights are okey</div>
         <div className={classes.item}>
-            <a href="/Dialogs"> Dialogs</a>
+            <NavLink to="/Dialogs"> Dialogs</NavLink>
         </div>
-        <div className={classes.item}><a href="/Content">Content</a></div>
+        <div className={classes.item}>
+            <NavLink to="/Content">Content</NavLink>
+        </div>
     </div>
 }
 
