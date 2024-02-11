@@ -6,3 +6,14 @@
 .item {
     margin: 400px;
 }
+
+.schedule {
+    padding: 40px;
+    font-weight: 500;
+    margin-left: auto;
+
+}
+
+.schedule a {
+    color: blueviolet;
+}

@@ -1,18 +1,27 @@
 import React from 'react';
 import classes from "./Unisub.module.css";
 import Date from './Datetime/Date';
+import ImgInfo from './SubInfo/ImgInfo';
+import SubName from './SubInfo/SubName';
+
+
+
 
 const Unisub = () => {
+
+    let dateInfo = [
+        { id: 1, time: "12:20 305 кабинет" },
+        { id: 2, time: "16:00 0204 кабинет" },
+    ]
+
+
     return <div className={classes.item}>
-        <img src="https://cdn.pvs-studio.com/import/docx/blog/0710_DevOps_vs_DevSecOps_ru/image2.png?ver=07-27-2023-02-50-26" />
-        <div>DevOps</div>
+        <ImgInfo />
+        <SubName />
         <div className={classes.itemdate}>
-            <Date message="12:20 305 кабинет" />
-            <Date message="16:00 0204 кабинет" />
-
+            <Date objData={dateInfo[0].time} />
+            <Date objData={dateInfo[1].time} />
         </div>
-
-
     </div>
 }
 

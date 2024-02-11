@@ -3,7 +3,7 @@ import classes from "./Date.module.css";
 
 const Date = (props) => {
     return <div>
-        <div className={classes.item}>{props.message}</div>
+        <div className={classes.item}>{props.objData}</div>
     </div>
 }
 

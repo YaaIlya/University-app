@@ -4,7 +4,7 @@ import Unisub from './Unisubjects/Unisub';
 
 const Content = () => {
     return <div>
-        <div>Расписание на <a>сегодня</a></div>
+        <div className={classes.schedule}>Расписание на <a>сегодня</a></div>
         <Unisub />
         <Unisub />
     </div>
