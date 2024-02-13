@@ -7,10 +7,11 @@ const SubName = (props) => {
         { id: 2, name: "Eminem" }
     ]
 
+    let subElemetns = subName.map(s => <div>{s.name}</div>);
+
     return (
         <div>
-            <div>{subName[0].name}</div>
-            <div>{subName[1].name}</div>
+            {subElemetns}
         </div >
 
     )

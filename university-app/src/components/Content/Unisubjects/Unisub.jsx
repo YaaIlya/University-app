@@ -14,13 +14,14 @@ const Unisub = () => {
         { id: 2, time: "16:00 0204 кабинет" },
     ]
 
+    let dateItems = dateInfo.map(d => <Date objData={d.time} />);
+
 
     return <div className={classes.item}>
         <ImgInfo />
         <SubName />
         <div className={classes.itemdate}>
-            <Date objData={dateInfo[0].time} />
-            <Date objData={dateInfo[1].time} />
+            {dateItems}
         </div>
     </div>
 }

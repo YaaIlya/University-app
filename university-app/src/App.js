@@ -4,7 +4,7 @@ import Header from './components/Header/Header';
 import Content from './components/Content/Content';
 import Footer from './components/Footer/Footer';
 import Dialogs from './components/Dialogs/Dialogs';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, } from 'react-router-dom';
 
 
 const App = () => {
