@@ -1,6 +1,0 @@
-.item {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-column-gap: 400px;
-    grid-row-gap: 200px;
-}

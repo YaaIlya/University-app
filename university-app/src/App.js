@@ -7,15 +7,19 @@ import Dialogs from './components/Dialogs/Dialogs';
 import { BrowserRouter, Routes, Route, } from 'react-router-dom';
 
 
-const App = () => {
+const App = (props) => {
+
+
+
   return (
     <BrowserRouter>
       <div className='app-wrapper'>
         <Header />
         <div className="app-wrapper-content">
           <Routes>
-            <Route path="/Content/*" element={<Content />} />
-            <Route path="/Dialogs/*" element={<Dialogs />} />
+            <Route path="/Content/*" element={<Content dateInfo={props.dateInfo} imgName={props.imgName} subName={props.subName} />} />
+            <Route path="/Dialogs/*" element={<Dialogs dialogsData={props.dialogsData} messagesData={props.messagesData} />} />
+
           </Routes>
         </div>
         <Footer />

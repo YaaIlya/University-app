@@ -7,19 +7,19 @@ import SubName from './SubInfo/SubName';
 
 
 
-const Unisub = () => {
+const Unisub = (props) => {
 
-    let dateInfo = [
-        { id: 1, time: "12:20 305 кабинет" },
-        { id: 2, time: "16:00 0204 кабинет" },
-    ]
 
-    let dateItems = dateInfo.map(d => <Date objData={d.time} />);
 
+    let dateItems = props.dateInfo.map(d => <Date objData={d.time} />);
+
+    let ImgItems = props.imgName.map(I => <ImgInfo objData={I.name} />);
+
+    let subElemetns = props.subName.map(s => <SubName objData={s.name} />);
 
     return <div className={classes.item}>
-        <ImgInfo />
-        <SubName />
+        {ImgItems}
+        {subElemetns}
         <div className={classes.itemdate}>
             {dateItems}
         </div>
@@ -27,3 +27,4 @@ const Unisub = () => {
 }
 
 export default Unisub;
+
