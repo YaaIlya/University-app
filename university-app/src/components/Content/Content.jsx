@@ -6,8 +6,8 @@ const Content = (props) => {
 
     return <div>
         <div className={classes.schedule}>Расписание на <a>сегодня</a></div>
-        <Unisub dateInfo={props.dateInfo} imgName={props.imgName} subName={props.subName} />
-        <Unisub dateInfo={props.dateInfo} imgName={props.imgName} subName={props.subName} />
+        <Unisub dateInfo={props.state.dateInfo} imgName={props.state.imgName} subName={props.state.subName} />
+        <Unisub dateInfo={props.state.dateInfo} imgName={props.state.imgName} subName={props.state.subName} />
     </div>
 }
 

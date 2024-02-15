@@ -17,8 +17,8 @@ const App = (props) => {
         <Header />
         <div className="app-wrapper-content">
           <Routes>
-            <Route path="/Content/*" element={<Content dateInfo={props.dateInfo} imgName={props.imgName} subName={props.subName} />} />
-            <Route path="/Dialogs/*" element={<Dialogs dialogsData={props.dialogsData} messagesData={props.messagesData} />} />
+            <Route path="/Content/*" element={<Content state={props.state.contentPage} />} />
+            <Route path="/Dialogs/*" element={<Dialogs state={props.state.dialogsPage} />} />
 
           </Routes>
         </div>
