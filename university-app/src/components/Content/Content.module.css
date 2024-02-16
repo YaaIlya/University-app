@@ -8,10 +8,22 @@
 }
 
 .schedule {
-    padding: 40px;
+    padding: 0px 40px;
     font-weight: 500;
     margin-left: auto;
 
+}
+
+.textarea {
+    padding: 0px 40px;
+    font-weight: 500;
+    margin-left: auto;
+}
+
+.button {
+    padding: 0px 40px 40px 40px;
+    font-weight: 500;
+    margin-left: auto;
 }
 
 .schedule a {

@@ -18,3 +18,11 @@
 .messages {}
 
 .message {}
+
+.textarea {
+    padding: 40px 0px 0px 0px;
+}
+
+.button {
+    padding: 40px 0px 0px 0px;
+}
