@@ -9,29 +9,34 @@ import state, { addPostActionCreator, onPostChangeActionCreator } from '../../re
 
 const Content = (props) => {
 
+    let state = props.store.getState().contentPage;
+
     let newPostElement = React.createRef();
 
-    let addPost = () => {
-        props.dispatch(addPostActionCreator());
+    let onAddPost = () => {
+        props.addPost();
+        // props.dispatch(addPostActionCreator());
     };
 
     let onPostChange = () => {
         let text = newPostElement.current.value;
-        let action = onPostChangeActionCreator(text);
-        props.dispatch(action);
+        // let action = onPostChangeActionCreator(text);
+        // props.dispatch(action);
+        props.onPostChange(text);
     }
 
     return <div>
         <div className={classes.schedule}>Расписание на <a>сегодня</a></div>
-        <Unisub dateInfo={props.state.contentPage.dateInfo} imgName={props.state.contentPage.imgName} subName={props.state.contentPage.subName} addTime={props.state.contentPage.addTime} />
+        <Unisub dateInfo={state.dateInfo} imgName={state.imgName} subName={state.subName} addTime={state.addTime} />
 
         <div className={classes.textarea}>
-            <textarea onChange={onPostChange} ref={newPostElement} value={props.state.contentPage.newDateText} />
+            <textarea onChange={onPostChange} ref={newPostElement} value={state.newDateText} />
         </div>
         <div className={classes.button}>
-            <button onClick={addPost}>Add post</button>
+            <button onClick={onAddPost}>Add post</button>
         </div>
     </div>
 }
+
 
 export default Content;
