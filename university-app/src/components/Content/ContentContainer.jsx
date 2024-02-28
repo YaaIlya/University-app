@@ -1,26 +1,31 @@
 import React from 'react';
 import { addPostActionCreator, onPostChangeActionCreator } from '../../redux/content-reducer';
 import Content from './Content';
+import StoreContext from '../../StoreContext';
 
 
 
 
 
-const ContentContainer = (props) => {
-
-    let state = props.store.getState().contentPage;
-
-    let addPost = () => {
-        props.store.dispatch(addPostActionCreator());
-    };
-
-    let onPostChange = (text) => {
-        let action = onPostChangeActionCreator(text);
-        props.store.dispatch(action);
-    }
-
+const ContentContainer = () => {
     return (
-        <Content addPost={addPost} onPostChange={onPostChange} contentPage={state} store={props.store} />
+        <StoreContext.Consumer>
+            {(store) => {
+
+                let addPost = () => {
+                    store.dispatch(addPostActionCreator());
+                };
+
+                let onPostChange = (text) => {
+                    let action = onPostChangeActionCreator(text);
+                    store.dispatch(action);
+                }
+
+                return <Content addPost={addPost} onPostChange={onPostChange} contentPage={store.getState().contentPage} />
+            }
+            }
+        </StoreContext.Consumer>
+
     )
 }
 

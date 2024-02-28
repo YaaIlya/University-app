@@ -1,7 +1,6 @@
 import React from 'react';
 import classes from "./Content.module.css";
 import Unisub from './Unisubjects/Unisub';
-import state, { addPostActionCreator, onPostChangeActionCreator } from '../../redux/content-reducer';
 
 
 
@@ -9,19 +8,16 @@ import state, { addPostActionCreator, onPostChangeActionCreator } from '../../re
 
 const Content = (props) => {
 
-    let state = props.store.getState().contentPage;
+    let state = props.contentPage;
 
     let newPostElement = React.createRef();
 
     let onAddPost = () => {
         props.addPost();
-        // props.dispatch(addPostActionCreator());
     };
 
     let onPostChange = () => {
         let text = newPostElement.current.value;
-        // let action = onPostChangeActionCreator(text);
-        // props.dispatch(action);
         props.onPostChange(text);
     }
 
