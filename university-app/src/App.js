@@ -7,7 +7,7 @@ import DialogsContainer from './components/Dialogs/DialogsContainer';
 import ContentContainer from './components/Content/ContentContainer';
 
 
-const App = (props) => {
+const App = () => {
 
 
   return (

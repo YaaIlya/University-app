@@ -18,17 +18,22 @@ let initialState = {
 const contentReducer = (state = initialState, action) => {
 
     switch (action.type) {
-        case ADD_TIME:
+        case ADD_TIME: {
             let newDateInfo = {
                 id: 3,
                 time: state.newDateText,
             };
-            state.dateInfo.push(newDateInfo);
-            state.newDateText = "";
-            return state;
-        case UPDATE_NEW_DATE_TEXT:
-            state.newDateText = action.newText;
-            return state;
+            let stateCopy = { ...state };
+            stateCopy.dateInfo = [...state.dateInfo];
+            stateCopy.dateInfo.push(newDateInfo);
+            stateCopy.newDateText = "";
+            return stateCopy;
+        }
+        case UPDATE_NEW_DATE_TEXT: {
+            let stateCopy = { ...state };
+            stateCopy.newDateText = action.newText;
+            return stateCopy;
+        }
         default:
             return state;
     }
