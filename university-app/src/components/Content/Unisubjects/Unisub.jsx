@@ -12,9 +12,9 @@ const Unisub = (props) => {
 
 
 
-    let dateItems = props.dateInfo.map(d => <Date objData={d.time} />);
-    let ImgItems = props.imgName.map(I => <ImgInfo objData={I.name} />);
-    let subElements = props.subName.map(s => <SubName objData={s.name} />);
+    let dateItems = props.dateInfo.map(d => <Date objData={d.time} key={d.id} />);
+    let ImgItems = props.imgName.map(I => <ImgInfo objData={I.name} key={I.id} />);
+    let subElements = props.subName.map(s => <SubName objData={s.name} key={s.id} />);
 
     return (
         <div className={classes.item}>
