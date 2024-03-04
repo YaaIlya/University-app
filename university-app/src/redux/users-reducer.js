@@ -4,11 +4,10 @@ const SET_USERS = "SET-USERS";
 
 let initialState = {
     users: [
-        { id: 1, photoUrl: "https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745", followed: false, fullName: "Ilya", status: "prepodovatel", location: { city: "Moscow", country: "Russia" } },
-        { id: 2, photoUrl: "https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745", followed: true, fullName: "Dima", status: "old prepodovatel", location: { city: "Kiev", country: "Ukrain" } },
-        { id: 3, photoUrl: "https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745", followed: false, fullName: "Artem", status: "young prepodovatel", location: { city: "Minsk", country: "Belarus" } },
+        //     { id: 1, photoUrl: "https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745", followed: false, fullName: "Ilya", status: "prepodovatel", location: { city: "Moscow", country: "Russia" } },
+        //     { id: 2, photoUrl: "https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745", followed: true, fullName: "Dima", status: "old prepodovatel", location: { city: "Kiev", country: "Ukrain" } },
+        //     { id: 3, photoUrl: "https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745", followed: false, fullName: "Artem", status: "young prepodovatel", location: { city: "Minsk", country: "Belarus" } },
     ]
-
 };
 
 const usersReducer = (state = initialState, action) => {
