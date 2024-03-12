@@ -15,7 +15,11 @@ const Footer = () => {
         <div className={classes.item}>
             <NavLink to="/Users">Users</NavLink>
         </div>
+        <div className={classes.item}>
+            <NavLink to="/Music">Music</NavLink>
+        </div>
     </div>
 }
+
 
 export default Footer;

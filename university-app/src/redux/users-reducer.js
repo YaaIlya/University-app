@@ -2,6 +2,7 @@ const FOLLOW = "FOLLOW";
 const UNFOLLOW = "UNFOLLOW";
 const SET_USERS = "SET-USERS";
 
+
 let initialState = {
     users: [
         //     { id: 1, photoUrl: "https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745", followed: false, fullName: "Ilya", status: "prepodovatel", location: { city: "Moscow", country: "Russia" } },
@@ -47,7 +48,5 @@ const usersReducer = (state = initialState, action) => {
 export const followAC = (userid) => ({ type: FOLLOW, userid })
 export const unfollowAC = (userid) => ({ type: UNFOLLOW, userid })
 export const setUsersAC = (users) => ({ type: SET_USERS, users })
-
-
 
 export default usersReducer;
