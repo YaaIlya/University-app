@@ -1,14 +1,16 @@
 const FOLLOW = "FOLLOW";
 const UNFOLLOW = "UNFOLLOW";
 const SET_USERS = "SET-USERS";
+const SET_CURRENT_PAGE = "SET-CURRENT-PAGE";
+const SET_TOTAL_USERS_COUNT = "SET-TOTAL-USERS-COUNT";
 
 
 let initialState = {
-    users: [
-        //     { id: 1, photoUrl: "https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745", followed: false, fullName: "Ilya", status: "prepodovatel", location: { city: "Moscow", country: "Russia" } },
-        //     { id: 2, photoUrl: "https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745", followed: true, fullName: "Dima", status: "old prepodovatel", location: { city: "Kiev", country: "Ukrain" } },
-        //     { id: 3, photoUrl: "https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745", followed: false, fullName: "Artem", status: "young prepodovatel", location: { city: "Minsk", country: "Belarus" } },
-    ]
+    users: [],
+    pageSize: 5,
+    totalUsersCount: 0,
+    currentPageNumber: 2,
+
 };
 
 const usersReducer = (state = initialState, action) => {
@@ -36,7 +38,13 @@ const usersReducer = (state = initialState, action) => {
             }
 
         case SET_USERS: {
-            return { ...state, users: [...state.users, ...action.users] }
+            return { ...state, users: action.users }
+        }
+        case SET_CURRENT_PAGE: {
+            return { ...state, currentPageNumber: action.currentPageNumber }
+        }
+        case SET_TOTAL_USERS_COUNT: {
+            return { ...state, totalUsersCount: action.count }
         }
 
 
@@ -48,5 +56,7 @@ const usersReducer = (state = initialState, action) => {
 export const followAC = (userid) => ({ type: FOLLOW, userid })
 export const unfollowAC = (userid) => ({ type: UNFOLLOW, userid })
 export const setUsersAC = (users) => ({ type: SET_USERS, users })
+export const setCurrentPageNumberAC = (currentPageNumber) => ({ type: SET_CURRENT_PAGE, currentPageNumber })
+export const setUsersTotalCountAC = (totalUsersCount) => ({ type: SET_TOTAL_USERS_COUNT, count: totalUsersCount })
 
 export default usersReducer;
